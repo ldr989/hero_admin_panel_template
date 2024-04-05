@@ -24,7 +24,6 @@ const HeroesListItem = ({ name, description, element, id }) => {
     }
 
     const deleteItem = (id) => {
-        console.log(id);
         dispatch(heroesDeleting(id));
     };
 

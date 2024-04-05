@@ -26,7 +26,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 heroes: state.heroes.filter(
-                    (hero) => hero.id !== action.heroId
+                    (hero) => hero.id !== action.payload
                 ),
             };
         default:
