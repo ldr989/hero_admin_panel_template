@@ -1,23 +1,62 @@
 {
-    "heroes": [
-        {
-            "id": 1,
-            "name": "Первый герой",
-            "description": "Первый герой в рейтинге!",
-            "element": "fire"
-        },
-        {
-            "id": 2,
-            "name": "Неизвестный герой",
-            "description": "Скрывающийся в тени",
-            "element": "wind"
-        },
-        {
-            "id": 3,
-            "name": "Морской герой",
-            "description": "Как аквамен, но не из DC",
-            "element": "water"
-        }
-    ],
-    "filters": ["all", "fire", "water", "wind", "earth"]
+  "heroes": [
+    {
+      "id": "4f9c6caf-d9bb-4607-b403-a766a9e6d303",
+      "name": "Чудик",
+      "description": "Умеет силой мысли (как он думает) заставлять людей делать что-либо",
+      "element": "wind"
+    },
+    {
+      "id": "a3978a8a-6502-4975-b97a-9e55db98e5d2",
+      "name": "Песочный",
+      "description": "Управляет песком любого вида",
+      "element": "earth"
+    },
+    {
+      "id": "18970afb-7a1f-4172-ae9c-cd370b4ddcb7",
+      "name": "Бежевый",
+      "description": "asdasdasdasdasdasdasd",
+      "element": "fire"
+    },
+    {
+      "id": "479deedb-5322-443a-a3c5-202e7d565270",
+      "name": "White",
+      "description": "asdasdasdasdasdasdasdasd",
+      "element": "fire"
+    },
+    {
+      "id": "c6ac450d-0cf6-474c-892a-38c7a35014a3",
+      "name": "asda",
+      "description": "asdhkjashdaweouyuaihdjasdasd",
+      "element": "water"
+    },
+    {
+      "id": "3ee7a6e5-ef84-4db5-854c-2d3318e788a5",
+      "name": "Бежевый",
+      "description": "фывфывфывфывфывфывфывфыв",
+      "element": "earth"
+    }
+  ],
+  "filters": [
+    {
+      "element": "all",
+      "rus": "Все"
+    },
+    {
+      "element": "fire",
+      "rus": "Огонь"
+    },
+    {
+      "element": "water",
+      "rus": "Вода"
+    },
+    {
+      "element": "wind",
+      "rus": "Ветер"
+    },
+    {
+      "element": "earth",
+      "rus": "Земля"
+    }
+  ]
 }
