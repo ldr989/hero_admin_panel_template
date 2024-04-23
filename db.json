@@ -1,0 +1,66 @@
+{
+  "heroes": [
+    {
+      "id": "4f9c6caf-d9bb-4607-b403-a766a9e6d303",
+      "name": "Чудик",
+      "description": "Умеет силой мысли (как он думает) заставлять людей делать что-либо",
+      "element": "wind"
+    },
+    {
+      "id": "a3978a8a-6502-4975-b97a-9e55db98e5d2",
+      "name": "Песочный",
+      "description": "Управляет песком любого вида",
+      "element": "earth"
+    },
+    {
+      "id": "df335074-b09e-4054-bc4f-338021968c86",
+      "name": "Питер пэн",
+      "description": "Он говорит что умеет летать но только не в нашем мире, и еще он сказал что победил пирата с крюком вместо одной руки",
+      "element": "wind"
+    },
+    {
+      "id": "532330a4-5dfc-4d33-b390-011ebe63394c",
+      "name": "Чувак",
+      "description": "Просто чувак, который ведет себя как чувак",
+      "element": "water"
+    },
+    {
+      "id": "55476e32-c06a-477e-a34d-6bce5257c341",
+      "name": "Лина",
+      "description": "Лина из доты, само воплощение мага огня",
+      "element": "fire"
+    }
+  ],
+  "filters": [
+    {
+      "element": "all",
+      "rus": "Все",
+      "active": "true",
+      "btnClassName": "btn btn-outline-dark"
+    },
+    {
+      "element": "fire",
+      "rus": "Огонь",
+      "active": "false",
+      "btnClassName": "btn btn-danger"
+    },
+    {
+      "element": "water",
+      "rus": "Вода",
+      "active": "false",
+      "btnClassName": "btn btn-primary"
+    },
+    {
+      "element": "wind",
+      "rus": "Ветер",
+      "active": "false",
+      "btnClassName": "btn btn-success"
+    },
+    {
+      "element": "earth",
+      "rus": "Земля",
+      "active": "false",
+      "btnClassName": "btn btn-secondary"
+    }
+  ]
+}

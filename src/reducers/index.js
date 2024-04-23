@@ -1,27 +1,27 @@
 const initialState = {
     heroes: [],
-    heroesLoadingStatus: "idle",
+    dataLoadingStatus: "idle",
     filters: [],
-    filtersLoadingStatus: "idle",
 };
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case "HEROES_FETCHING":
+        case "DATA_FETCHING":
             return {
                 ...state,
-                heroesLoadingStatus: "loading",
+                dataLoadingStatus: "loading",
             };
-        case "HEROES_FETCHED":
+        case "DATA_FETCHED":
             return {
                 ...state,
-                heroes: action.payload,
-                heroesLoadingStatus: "idle",
+                heroes: action.payload.heroes,
+                filters: action.payload.filters,
+                dataLoadingStatus: "idle",
             };
-        case "HEROES_FETCHING_ERROR":
+        case "DATA_FETCHING_ERROR":
             return {
                 ...state,
-                heroesLoadingStatus: "error",
+                dataLoadingStatus: "error",
             };
         case "HEROES_DELETING":
             return {
@@ -35,21 +35,19 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 heroes: [...state.heroes, action.payload],
             };
-        case "FILTERS_FETCHING":
+        case "ACTIVITY_CHANGE":
             return {
                 ...state,
-                filtersLoadingStatus: "loading",
-            };
-        case "FILTERS_FETCHED":
-            return {
-                ...state,
-                filters: action.payload,
-                filtersLoadingStatus: "idle",
-            };
-        case "FILTERS_FETCHING_ERROR":
-            return {
-                ...state,
-                filtersLoadingStatus: "error",
+                filters: state.filters.map(
+                    (filter) =>
+                        (filter = {
+                            ...filter,
+                            active:
+                                filter.element === action.payload
+                                    ? "true"
+                                    : "false",
+                        })
+                ),
             };
         default:
             return state;

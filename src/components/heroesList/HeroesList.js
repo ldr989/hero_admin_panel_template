@@ -2,11 +2,7 @@ import { useHttp } from "../../hooks/http.hook";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import {
-    heroesFetching,
-    heroesFetched,
-    heroesFetchingError,
-} from "../../actions";
+import { dataFetching, dataFetched, dataFetchingError } from "../../actions";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
@@ -16,25 +12,31 @@ import Spinner from "../spinner/Spinner";
 // Удаление идет и с json файла при помощи метода DELETE
 
 const HeroesList = () => {
-    const heroes = useSelector((state) => state.heroes);
-    const heroesLoadingStatus = useSelector(
-        (state) => state.heroesLoadingStatus
+    const activeElement = useSelector((state) => state.filters).filter(
+        (filter) => filter.active === "true"
     );
+    const activeHeroes = useSelector((state) => state.heroes).filter(
+        (hero) =>
+            activeElement[0].element === "all" ||
+            activeElement[0].element === hero.element
+    );
+
+    const dataLoadingStatus = useSelector((state) => state.dataLoadingStatus);
     const dispatch = useDispatch();
     const { request } = useHttp();
 
     useEffect(() => {
-        dispatch(heroesFetching());
-        request("http://localhost:3001/heroes")
-            .then((data) => dispatch(heroesFetched(data)))
-            .catch(() => dispatch(heroesFetchingError()));
+        dispatch(dataFetching());
+        request("http://localhost:3001/db")
+            .then((data) => dispatch(dataFetched(data)))
+            .catch(() => dispatch(dataFetchingError()));
 
         // eslint-disable-next-line
     }, []);
 
-    if (heroesLoadingStatus === "loading") {
+    if (dataLoadingStatus === "loading") {
         return <Spinner />;
-    } else if (heroesLoadingStatus === "error") {
+    } else if (dataLoadingStatus === "error") {
         return <h5 className="text-center mt-5">Ошибка загрузки</h5>;
     }
 
@@ -47,7 +49,7 @@ const HeroesList = () => {
             return <HeroesListItem key={id} id={id} {...props} />;
         });
     };
-    const elements = renderHeroesList(heroes);
+    const elements = renderHeroesList(activeHeroes);
     return <ul>{elements}</ul>;
 };
 
