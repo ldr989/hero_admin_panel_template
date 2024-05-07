@@ -11,6 +11,12 @@
       "name": "Бежевый",
       "description": "asdasdasdasdasdasdasdasd",
       "element": "wind"
+    },
+    {
+      "id": "76e548ad-77fe-42bd-a3d3-108c3c1c2510",
+      "name": "dasdasd",
+      "description": "asdasdasdasdasdasd",
+      "element": "water"
     }
   ],
   "filters": [
