@@ -23,6 +23,18 @@
       "name": "das",
       "description": "asd",
       "element": "water"
+    },
+    {
+      "id": "0a3ff02a-291b-4edd-b56f-fe966e269485",
+      "name": "asdasd",
+      "description": "asdasdas",
+      "element": "fire"
+    },
+    {
+      "id": "1a02327d-0261-4024-879d-99404c6e3f8b",
+      "name": "Black",
+      "description": "asdasdasd",
+      "element": "earth"
     }
   ],
   "filters": [

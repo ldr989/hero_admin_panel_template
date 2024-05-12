@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 
-import { heroCreated } from "../heroesList/heroesSlice";
+import { heroCreated } from "../../slices/heroesSlice";
 
 const HeroesAddForm = () => {
     // Состояния для контроля формы

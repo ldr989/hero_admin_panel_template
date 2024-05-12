@@ -5,7 +5,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { createSelector } from "reselect";
 
 import { fetchHeroes } from "../../actions";
-import { heroDeleted } from "./heroesSlice";
+import { heroDeleted } from "../../slices/heroesSlice";
 import HeroesListItem from "../heroesListItem/HeroesListItem";
 import Spinner from "../spinner/Spinner";
 
